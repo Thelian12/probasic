@@ -1,0 +1,273 @@
+#main-title,
+        h2,
+        h3,
+        h4 {
+            color: red;
+        }
+
+        h5,
+        h6 {
+            color: green
+        }
+
+
+.principal { 
+
+    
+    color: black;
+    text-align:center;
+
+}
+
+.subtitle {
+
+    color: black;
+}
+
+
+
+body { 
+
+font-family:arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.table-title { 
+    color:black;
+}
+
+main { 
+    width:60%;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+header { 
+
+    background-color: green;
+    color:white;
+    padding:20px;
+    text-align:center;
+
+    
+}
+
+.menu_nav { 
+
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu_nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu_nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu_nav ul li a:hover {
+    text-decoration: underline;
+    color: rgb(91, 255, 167);
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #333;
+    min-width: 200px;
+}
+
+.menu_item:hover .submenu {
+    display: block;
+}
+
+.submenu li  {
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+footer { 
+    background-color:black;
+    color:white;
+    padding:20px; 
+    text-align: center;
+    position: fixed;
+    margin-top:30px;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+padding: 10px;
+text-align: center;
+
+}
+
+thead {
+    background-color: #e3e3e3;
+}
+
+.alinear_texto {
+    text-align: left;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*Estilos formulario*/
+
+.form {
+    background-color: black;
+}
+
+.title_form {
+    color: green;
+    text-align: center;
+}
+
+.datos_form {
+    color:white;
+    text-align:center;
+}
+
+/*Estilos para propiedades de CSS*/
+
+.propiedadescss { 
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background: white;;
+}
+
+.subtitulo_propiedades { 
+    color:black;
+    font-family: Arial, sans-serif;
+}
+
+/*Estilos para bloques de código*/
+
+pre { 
+    background: #1e1e1e;   /* Fondo negro */
+    color: #f8f8f2;        /* Texto gris claro */
+    padding: 15px;           /* Espaciado interno para que el texto no quede pegado al borde */
+    border-radius: 8px;      /* Bordes redondeados */
+    overflow-x: auto;        /* Si el código es muy largo, aparece scroll horizontal */
+    }
+
+
+code {
+  font-family: "Courier New", monospace; /* Fuente monoespaciada típica para código */
+  font-size: 16px;                       /* Tamaño de la letra */
+  display: block;                        /* Hace que <code> se comporte como bloque, ocupando todo el ancho */
+  
+  /* 🌈 Texto multicolor con degradado */
+  /* linear-gradient(90deg, colores...) → crea un degradado horizontal de izquierda a derecha pasando por los colores del arcoíris. */
+  /*background-size: 400% 100% → hace que el degradado sea mucho más largo de lo que ocupa el texto, lo cual permite animarlo después.*/
+
+ background: linear-gradient(        
+    90deg, 
+    #ff0000, #ff9900, #ffff00, 
+    #33ff00, #00ffff, #0066ff, 
+    #cc00ff, #ff0099, #ff0000
+  );
+  background-size: 400% 100%; /* El degradado es más largo de lo normal */
+
+/*Trucos para que el fondo solo afecte al texto*/
+
+  -webkit-background-clip: text; /* Hace que el degradado se "recorte" dentro de las letras (para Chrome, Safari) */
+  -webkit-text-fill-color: transparent; /* Vuelve transparente el relleno, dejando visible solo el degradado */
+  background-clip: text; /* Compatibilidad para otros navegadores */
+  color: transparent;   /* Color de texto transparente como respaldo */
+  animation: rainbow 6s linear infinite; /*animation: rainbow 6s linear infinite; → Aplica una animación llamada rainbow que dura 6 segundos, se mueve de forma constante (linear), y se repite para siempre (infinite).*/
+}
+
+/*@keyframes → Sirve para definir cómo cambia algo con el tiempo.
+
+Aquí le decimos que el degradado se mueva:
+
+En el inicio (0%) empieza en la izquierda.
+
+En el final (100%) se mueve hacia la derecha.*/
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/*Estilos boton propiedades CSS*/
+
+.button_container { 
+    text-align: center; /* Centra el botón/enlace */
+    margin-top: 40px;     /* Espacio arriba */
+}
+
+.buttonpro { 
+    display: inline-block;        /* Para que respete padding como un botón */
+    padding: 10px 20px;           /* Tamaño interno */
+    font-size: 16px;           
+    border-radius: 5px;           /* Bordes redondeados */
+    background-color: black;    
+    color:white; 
+    text-decoration: none;         /* Quita el subrayado */
+    transition:0.3s;               /* Suaviza el cambio de color */
+}
+
+.buttonpro:hover {
+    background-color:black;
+}
+
+/*Estilos tabla de selectores CSS y subtitulo selectores*/
+
+.subtitulo_selectores { 
+    color:black;
+    
+}
+

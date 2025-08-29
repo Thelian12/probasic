@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de CSS</title>
+    <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+<body class="propiedadescss">
+
+    <h1>Propiedades de CSS</h1>
+
+    <h2 class="subtitulo_propiedades">¿Como funciona CSS</h2>
+    <p>CSS utiliza una sintaxis simple basada en el inglés con un conjunto de reglas que la gobiernan. Como mencionamos anteriormente, HTML no fue hecho con la intención de utilizar elementos de estilo, sino solo para el marcado de la página. Fue creado simplemente para describir el contenido. Por ejemplo:</p>
+
+    <code>&lt;p&gtEsto es un parrafo &ltp&gt;</code>
+
+    <h2 class="subtitulo_propiedades">Font-Family:</h2>
+    <p>Define la familia tipográfica. Es conveniente poner una lista de dos o tres tipografías separadas por coma, porque si el usuario no tiene instalada la tipografía que nosotros elegimos, el navegador opta por mostrar la siguiente que debería ser una similar, si tampoco la tiene instalada, mostrará la tipografía por defecto.</p>
+
+    
+<pre><code>p {
+font-family: Courier, "Lucida Console", monospace;
+}</code></pre>
+
+<h2 class="subtitulo_propiedades">Font-size:</h2>
+<p>Define el tamaño de la fuente y el valor se puede escribir en pixels o en ems. En este momento se recomienda usar ems. Los dos son valores relativos, el pixel es un valor relativo a la resolución de la pantalla, pero el em es relativo al tamaño de la fuente definida por el usuario. Si el usuario no cambió la configuración, el valor por defecto de los textos en todos los navegadores es de 16px. Entonces 1em = 16px.</p>
+
+<pre><code>p {
+    font-size:14pt;
+font-style:italic;
+}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Color:</h2>
+<p>Define el color de la tipografía. Los colores se pueden escribir de 3 formas distinas: con sistema hexadecimal, por ejemplo: #FF0000 (es rojo). Con los nombres de los colores (más limitado) por ejemplo: black, red, green. O usando RGB, esta paleta permite agregar el canal alfa para hacer transparencias.</p>
+
+<pre><code>.cuadro {
+    color:red;
+}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Width</h2>
+<p>Define el ancho de un elemento, el valor se puede escribir en pixels, ems o porcentaje.</p>
+
+<pre><code>#container {
+    width:960px;}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Max-width o min-width:</h2>
+<p>Definen el ancho máximo o mínimo de un elemento. Muy importante en sitios adaptables.</p>
+
+<pre><code>#container {
+    max_widt:3.5em;
+    min-widt:10%;
+}</code></pre>
+
+<h2 class="subtitulo_propiedades">Height:</h2>
+<p>Define el alto de un elemento, el valor se puede escribir en pixels, ems o porcentaje.</p>
+
+<pre><code>.cuadro {
+    height:120px;
+}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Max-height o min-height:</h2>
+<p>Definen el alto máximo o mínimo de un elemento. Muy importante en sitios adaptables.</p>
+
+<pre><code>#container {
+    max-height:300px;
+    min-height:150px;
+}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Padding:</h2>
+<p>Es la distancia desde el borde de un elemento hasta su contenido.</p>
+
+<pre><code>div {
+    padding top:10px; 
+    padding right:20px; 
+    padding bottom:30px; 
+    padding left:20px; 
+}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Margin:</h2>
+<p>Es la distancia entre un elemento y otro (desde el borde de un elemento hacia afuera).</p>
+
+<pre><code>
+    div { 
+        margin-top:10px;
+        margin-bottom:10px;
+        margin-left:10px;
+    }
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Border:</h2>
+<p>Define el borde de un elemento, su color, su estilo y grosor.</p>
+
+<pre><code>div {
+    border-top: 1px solid #C00; 
+    border-bottom: 1px solid #C00; 
+    border-bottom: 1px solid #C00; 
+}
+</code></pre>
+
+<h2 class="subtitulo_propiedades">Background:</h2>
+<p>Define los fondos de un objeto. El fondo puede ser una imagen o un color. El color puede ser pleno o degradado. La imagen se puede repetir formando una trama (es lo que ocurre por defecto) o se puede especificar que no repita y que se coloque en determinada posición.</p>
+
+<pre><code>div {
+    background-image: url(`images/imagen_pequena.png`);  
+    background-repeat: no-repeat; 
+    background-position: 2em 1.5cm; 
+    background-attachment: fixed; 
+}
+</code></pre>
+</body>
+</html>
+<div class="button_container">
+    <a href="../index.html" class="buttonpro">Ir al index principal</a>
+    </div>
+
+
+</body>
+</html>
+</body>
+</html>

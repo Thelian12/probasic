@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de CSS</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <main>
+        <section>
+   
+    <h1>Selectores de CSS</h1>
+    <p>Los selectores CSS son patrones de texto que el navegador utiliza para identificar los elementos HTML y XML a los que se les aplicarán las reglas de estilo de una hoja de CSS. Permiten seleccionar elementos basados en su etiqueta, identificadores (id), clases (class), atributos, y la relación con otros elementos en el árbol del documento, como ser un hijo o descendiente. </p>
+    </section>
+
+
+    <!--Tabla de Selectores-->
+    <section>
+
+<h2 class="subtitulo_selectores">Tabla de selectores CSS</h2>
+    </section>
+
+    <table>
+
+            <thead>
+                <tr>
+    
+        <th>Tipo de selector</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+    </tr>
+            </thead>
+            
+            <tbody>
+<tr>
+    <td>Selectores de etiquetas</td>
+                        <td class="alinear_texto">Seleccionan todos los elementos con una etiqueta HTML específica.</td>
+                        <td class="alinear_texto">Ejemplo: p selecciona todas las etiquetas<code>&lt;p&gt;.</code></td>
+                    </tr>
+                    <tr>
+                        <td>Selectores de ID</td>
+                        <td class="alinear_texto">Seleccionan un elemento HTML específico que tiene un atributo id único, usando el símbolo #. </td>
+                        <td class="alinear_texto">Ejemplo:#mi-id selecciona el elemento con id="mi-id".</td>
+                    </tr>
+                    <tr>
+                        <td>Selectores de clase</td>
+                        <td class="alinear_texto">Seleccionan todos los elementos que tienen un atributo class específico, usando el símbolo.</td>
+                        <td class="alinear_texto">Ejemplo: .mi-clase selecciona todos los elementos con class="mi-clase". </td>
+                    </tr>
+                    <tr>
+                        <td>Selectores de atributo</td>
+                        <td class="alinear_texto">Seleccionan elementos según la presencia de un atributo o el valor de ese atributo. </td>
+                        <td class="alinear_texto">Ejemplo: a[target] selecciona todos los elementos <a> que tengan el atributo target.</td>
+                    </tr>
+                    <tr>
+                        <td>Combinadores</td>
+                        <td class="alinear_texto">Permiten definir la relación entre los selectores.</td>
+                        <td class="alinear_texto">
+                            <ul>
+                                <li>Descendiente (espacio): div p selecciona todos los párrafos que están dentro de un div. </li>
+                                <li>Hijo (>): div > p selecciona solo los párrafos que son hijos directos de un div. </li>
+                                <li>Hermano Adyacente (+): h2 + p selecciona el párrafo que sigue inmediatamente a un h2. </li>
+                                <li>Hermano General (~): h2 ~ p selecciona todos los párrafos que siguen a un h2 y comparten el mismo padre. </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pseudo-clases y Pseudo-elementos</td>
+                        <td class="alinear_texto">Permiten seleccionar elementos basados en su estado o parte del elemento. </td>
+                        <td>Ejemplo: :hover selecciona un elemento cuando el usuario pasa el ratón por encima de él. </td>
+                    </tr>
+                    
+   </tbody>
+   </table>
+   </main>
+
+   <div class="button_container">          
+    <a href="../index.html" class="buttonpro">Ir al index principal</a>
+    </div>  
+
+
+
+</body>
+</html>
+</body>
+</html>
