@@ -1,0 +1,47 @@
+
+* { 
+    margin: 0;
+    padding:0;
+}
+
+body { 
+    background-color:#c0c0c0;    
+}
+
+h1 { 
+    color: black;
+    text-align:center;
+}
+p#color_p { 
+    color: #008000;
+}
+
+p.color_p  { 
+    color:#800080;
+}
+
+div#menu_nav > ul#opciones > li:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.button_container { 
+    text-align: center; /* Centra el botón/enlace */
+    margin-top: 40px;     /* Espacio arriba */
+}
+
+.buttonpro { 
+    display: inline-block;        /* Para que respete padding como un botón */
+    padding: 10px 20px;           /* Tamaño interno */
+    font-size: 16px;           
+    border-radius: 5px;           /* Bordes redondeados */
+    background-color: #000000;    
+    color:#ffffff; 
+    text-decoration: none;         /* Quita el subrayado */
+    transition:0.3s;               /* Suaviza el cambio de color */
+}
+
+.buttonpro:hover {
+    background-color:#000000;
+}
+
