@@ -23,6 +23,7 @@
             <li><a href="html/selectorescss.html">Selectores CSS</a></li>
             <li><a href="html/propiedadescss.html">Propiedades CSS</a></li>
             <li><a href="">Pie de pagina</a></li>
+
             <!-- Menus desplegable-->
             <li class="menu_item">
                 <a href="">Etiquetas</a>
@@ -36,8 +37,16 @@
                             <li><a href="/html/ejercss.html">Ejercicios CSS</a></li>
                 </ul>
             </li>
+            <li><a href="/eventoJs/eventosjs.html">Eventos Js</a></li>
         </ul>
     </nav>
+
+    <!-- Js botones de eventos-->
+    <section class="js-buttons">
+        <h2>Pruebas con JavaScript</h2>
+        <button onclick="ejmfunction()">Javascript</button>
+        <button ondblclick="funciondbl()">Js DBL</button>
+    </section>
 
     <!--Contenido principal de mi pagina web-->
     <main>
@@ -108,6 +117,16 @@
     <footer>
         <p>Todos los derechos reservados - sitio creado por Leandro Rincon</p>
     </footer>
+
+    <script>
+function ejmfunction() { 
+    alert("Hola estoy funcionando");
+}
+
+function funciondbl() {
+alert("Hola con doble click");
+}
+    </script>
 
 </body>
 

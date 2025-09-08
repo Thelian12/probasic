@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Js</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <h1 class="principal">Eventos</h1>
+    <p>Estoy aprendiendo eventos en Js</p>
+
+    <nav class="menu_nav">
+        <ul>
+            <!-- Menus desplegable-->
+            <li class="menu_item">
+                <a href="">Eventos Js</a>
+                <ul class="submenu">
+                    <li><a href="/eventoJs/evento2.html">Contador de clics</a></li>
+                    <li><a href="/eventoJs/evento3.html">Cambiar colores</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="eventos-js">
+        <h2>Empezando</h2>
+
+        <!--Evento click-->
+        <button id="btnclick">Haz clic</button>
+
+        <!--button doble clic-->
+        <button id="btndblclick">Haz doble clic</button>
+
+        <!-- Evento mouseover -->
+        <button id="btnhover">Pasa el mouse</button>
+
+        <!--Evento teclado-->
+        <input id="inputteclado" type="text" placeholder="Escribe algo...">
+
+        <!--Evento formulario-->
+
+        <form id="formdemo">
+            <input type="text" placeholder="Tu nombre">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <button id="btnColor">Cambiar fondo</button>
+    <p id="parrafo">Este texto se puede ocultar y mostrar.</p>
+    <button id="btnToggle">Mostrar/Ocultar</button>
+
+    <button id="btnHora">Mostrar hora</button>
+    <p id="hora"></p>
+
+    <!-- <button id="counter">contador</button> -->
+    <button onclick="sumar()">contador</button>
+    <label for="" id="espaciosuma"></label>
+
+    <script src="../js/eventos.js"></script>
+    <a href="/index.html">Ir al index principal</a>
+
+
+</body>
+
+</html>
