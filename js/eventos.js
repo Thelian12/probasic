@@ -57,3 +57,29 @@ function sumar() {
 // document.getElementById("counter").addEventListener("click", sumar);
 
 
+// Crear un objeto Date
+const date_ejm = new Date();
+
+// Mostrar la fecha completa
+console.log("Fecha completa:", date_ejm);
+
+// Extraer y mostrar partes de la fecha
+console.log("Día semana (número): " + date_ejm.getDay()); // 0 = Domingo, 1 = Lunes, ...
+console.log("Día del mes: " + date_ejm.getDate());
+console.log("Mes (número): " + (date_ejm.getMonth() + 1)); // +1 porque empieza en 0
+console.log("Año: " + date_ejm.getFullYear());
+console.log("Hora: " + date_ejm.getHours());
+console.log("Minutos: " + date_ejm.getMinutes()); // ← corregido (era 'getMinutos')
+console.log("Segundos: " + date_ejm.getSeconds());
+console.log("Milisegundos: " + date_ejm.getMilliseconds());
+
+// Arrays con nombres
+const meses = [
+  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+  "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+];
+const dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+
+// Mostrar nombre del día y mes
+console.log("Día de la semana: " + dias[date_ejm.getDay()]);
+console.log("Mes del año: " + meses[date_ejm.getMonth()]);
