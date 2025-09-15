@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#f0f2f5;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content:center;
+    align-items:start;
+    height:100vh;
+    padding-top:50px;
+}
+
+.todo_container { 
+    background-color:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    width:300px;
+}
+
+h2 { 
+    text-align: center;
+    margin-bottom:20px;
+    color:  #333;
+}
+
+input[type="text"] {
+    width:93%;
+    padding:10px;
+    margin-bottom:10px;
+    border: 1px solid  #ccc;
+    border-radius: 5px;
+}
+
+#agregarBtn { 
+width: 100%;
+padding:10px;
+background-color:#4CAF50;
+color: white;
+font-weight:bold;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+#agregarBtn:hover {
+    background-color: #45a049;
+}
+
+#listatareas {
+    list-style-type:none;
+    padding:0;
+}
+
+li { 
+    padding:10px;
+    background-color: #eee;
+    border-radius:5px;
+    margin-bottom:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+li.completed {
+    text-decoration:line-through;
+    color:gray;
+}

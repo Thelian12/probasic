@@ -20,7 +20,7 @@ tareaInput.addEventListener("keypress",function(event) {
 function agregarTarea() {
     const textoTarea =  tareaInput.value.trim()
     if(textoTarea === "") {
-        alert("Por favor, escribe una tarea")
+        Swal.fire("Por favor, escribe una tarea")
         return
     }
     const li = document.createElement("li")
@@ -44,3 +44,13 @@ function agregarTarea() {
     tareaInput.value = ""
     tareaInput.focus()
 }
+
+// Evento para el botón
+    agregarBtn.addEventListener("click", agregarTarea);
+
+    // Evento para Enter
+    tareaInput.addEventListener("keypress", function (event) {
+         if (event.key === "Enter") {
+        agregarTarea();
+    }
+    });

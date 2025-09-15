@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos en Js</title>
+    <link rel="stylesheet" href="/css/metodos.css">
+</head>
+<body>
+    <h1>Métodos de clase</h1>
+    <h2>¿Qué es un método de una clase?</h2>
+
+    <p>Simplificando mucho, un método es el nombre que recibe una función que existe dentro de una clase. Se utilizan para englobar comportamientos o funcionalidades relacionadas en conjunto con la clase y mediante las cuales podemos segmentar y separar en bloques de código.</p>
+    <p>Por ejemplo, en el siguiente fragmento de código definimos una constante <span>text</span> que contiene el  <span>"Manz"</span>. En la siguiente línea, ejecutamos el método <span>.repeat()</span>, que es una función que pertenece a todos los objetos que son definidos como , y que simplemente repite el texto el número de veces que le pasamos por parámetro:</p>
+<pre class="code_block"><code>
+<span class="colorcode"> const </span> text = <span class="colorcode2">"Manz"</span>;
+<span class="colorcode">text</span><span class="colorcode3">.repeat()</span>;
+</code></pre>
+
+ <h2>¿Qué es un método?</h2>
+ <p>En nuestro caso, hablamos de métodos cuando nos referimos a funciones que existen en el interior de una clase. Observa los siguientes ejemplos.</p>
+
+ <p>En este fragmento de código tenemos una función independiente:</p>
+ <pre class="code_block"><code>
+<span class="colorcode">function</span> hablar () {
+    <span class="colorcode">return</span> <span class="colorcode2">"Hola"</span>;
+}
+ </code></pre>
+
+ <p>
+Esta función no está asociada a ningún otro elemento. Simplemente existe en el ámbito global de nuestro programa. Vamos ahora a convertirla en un método de la clase <span>Animal</span> (y por lo tanto, devolver en ella algo más acorde):</p>
+<pre class="code_block"><code>
+// Forma corta (recomendado)
+<span class="colorcode">class</span> <span class="colorcode">Animal</span> {
+    <span class="colorcode3">hablar</span>() {
+        <span class="colorcode">return</span> <span class="colorcode2">"Cuak"</span>;
+    }
+}
+</code></pre>
+<p>Observa que esto no es más una forma de incluir la función anterior dentro de nuestra clase <span>Animal.</span> Realmente, podríamos también hacerlo de la siguiente forma, sin embargo, la anterior es mucho más compacta y sencilla, por lo que es la que más se suele utilizar, pero quizás con esta te resulte más claro lo que se está haciendo dentro de la clase:</p>
+<pre class="code_block"><code>
+    // Forma larga
+<span class="colorcode">class</span> <span class="colorcode">Animal</span> {
+  <span class="colorcode3">hablar</span> = <span class="colorcode">function</span>() {
+    <span class="colorcode">return</span> <span class="colorcode2">"Cuak"</span>;
+  }
+}
+</code></pre>
+
+<p>Una vez declarado el método hablar() dentro de la clase Animal, podemos instanciar el objeto mediante un new Animal() y tener ese método disponible. Ten en cuenta que podemos crear varias variables de tipo Animal y serán totalmente independientes cada una:</p>
+<pre class="code_block"><code>
+    // Creación de una instancia u objeto (pato)
+<span class="colorcode">const</span> pato = <span class="colorcode">new</span> <span class="colorcode">Animal</span>();
+<span class="colorcode">pato</span>.<span class="colorcode3">hablar</span>(); // 'Cuak'
+
+    // Creación de otra instancia u objeto (donald)
+<span class="colorcode">const</span> donald = <span class="colorcode">new</span> <span class="colorcode">Animal</span>();
+<span class="colorcode">donald</span>.<span class="colorcode3">hablar</span>(); // 'Cuak'
+</code></pre>
+<p>Observa que el método hablar() existe tanto en las variables pato como donald porque ambas son de tipo Animal. Al igual que ocurre con una función normal, se le pueden pasar varios parámetros al método y trabajar con ellos como venimos haciendo normalmente con las funciones.</p>
+
+
+<h2>Métodos comunes de String</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td>.length</td>
+            <td>Longitud de la cadena</td>
+            <td>"hola".length → 4</td>
+        </tr>
+        <tr>
+            <td>.toUpperCase()</td>
+            <td>Convierte a mayúsculas</td>
+            <td>"hola".toUpperCase() → "HOLA"</td>
+        </tr>
+        <tr>
+            <td>.toLowerCase()</td>
+            <td>Convierte a mayúsculas</td>
+            <td>"HOLA".toLowerCase() → "hola"</td>
+        </tr>
+        <tr>
+            <td>.trim()</td>
+            <td>Elimina espacios al inicio y final</td>
+            <td>" hola ".trim() → "hola"</td>
+        </tr>
+        <tr>
+            <td>.includes(sub)</td>
+            <td>Verifica si contiene una subcadena</td>
+            <td>"hola".includes("la") → true</td>
+        </tr>
+        <tr>
+            <td>.indexOf(sub)</td>
+            <td>Índice de la primera ocurrencia</td>
+            <td>"hola".indexOf("l") → 2</td>
+        </tr>
+        <tr>
+            <td>.slice(start, end)</td>
+            <td>Extrae una porción</td>
+            <td>"hola".slice(1,3) → "ol"</td>
+        </tr>
+        <tr>
+         <td>.replace(a, b)</td>
+         <td>Reemplaza subcadena</td>
+         <td>"hola".replace("o", "a") → "hala"</td>   
+        </tr>
+
+        <tr>
+            <td>.split(sep)</td>
+            <td>Divide en array usando separador</td>
+            <td>"a,b,c".split(",") → ["a","b","c"]</td>
+        </tr>
+    </thead>
+</tbody>
+</table>
+
+<h2>Métodos comunes para números</h2>
+<table>
+    <thead>
+        <tr>
+        <th>Método/Función</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Number.isInteger(num)</td>
+            <td>Verifica si es entero</td>
+            <td>Number.isInteger(4.5) → false</td>
+        </tr>
+        <tr>
+            <td>num.toFixed(d)</td>
+            <td>Redondea y devuelve string con decimales</td>
+            <td>(3.14159).toFixed(2) → "3.14"</td>
+        </tr>
+        <tr>
+            <td>parseInt(str)</td>
+            <td>Convierte string a entero</td>
+            <td>parseInt("123abc") → 123</td>
+        </tr>
+        <tr>
+            <td>parseFloat(str)</td>
+            <td>Convierte string a decimal</td>
+            <td>parseFloat("12.34xyz") → 12.34</td>
+        </tr>
+        <tr>
+            <td>Math.round(num)</td>
+            <td>Redondea al entero más cercano</td>
+            <td>Math.round(4.6) → 5</td>
+        </tr>
+        <tr>
+            <td>Math.floor(num)</td>
+            <td>Redondea hacia abajo</td>
+            <td>Math.floor(4.9) → 4</td>
+        </tr>
+        <tr>
+            <td>Math.ceil(num)</td>
+            <td>Redondea hacia arriba</td>
+            <td>Math.ceil(4.1) → 5</td>
+        </tr>
+        <tr>
+            <td>Math.random()</td>
+            <td>Número aleatorio entre 0 y 1</td>
+            <td>Math.random()</td>
+        </tr>
+        <tr>
+            <td>Math.max(a,b,...)</td>
+            <td>Devuelve el máximo</td>
+            <td>Math.max(1,5,3) → 5</td>
+        </tr>
+        <tr>
+            <td>Math.min(a,b,...)</td>
+            <td>Devuelve el mínimo</td>
+            <td>Math.min(1,5,3) → 1</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Métodos comunes de Array</h2>
+<table>
+    <thead>
+        <tr>
+        <th>Método</th>
+        <th>Descripción</th>
+        <th>Ejemplo</th>
+        </tr>
+    </thead>
+<tbody>
+    <tr>
+        <td>.length</td>
+        <td>Longitud del array</td>
+        <td>[1,2,3].length → 3</td>
+    </tr>
+    <tr>
+        <td>.push(element)</td>
+        <td>Añade elemento al final</td>
+        <td>[1,2].push(3) → [1,2,3]</td>
+    </tr>
+    <tr>
+        <td>.pop()</td>
+        <td>Elimina y devuelve el último elemento</td>
+        <td>[1,2,3].pop() → 3, array: [1,2]</td>
+    </tr>
+    <tr>
+        <td>.shift()</td>
+        <td>Elimina y devuelve el primer elemento</td>
+        <td>[1,2,3].shift() → 1, array: [2,3]</td>
+    </tr>
+    <tr>
+        <td>.unshift(element)</td>
+        <td>Añade elemento al inicio</td>
+        <td>[1,2].unshift(0) → [0,1,2]</td>
+    </tr>
+    <tr>
+        <td>.indexOf(element)</td>
+        <td>Índice de la primera ocurrencia</td>
+        <td>[1,2,3].indexOf(2) → 1</td>
+    </tr>
+    <tr>
+        <td>.includes(element)</td>
+        <td>Verifica si contiene el elemento</td>
+        <td>[1,2,3].includes(3) → true</td>
+    </tr>
+    <tr>
+        <td>.slice(start, end)</td>
+        <td>Extrae porción del array</td>
+        <td>[1,2,3,4].slice(1,3) → [2,3]</td>
+    </tr>
+    <tr>
+        <td>.splice(start, count, items...)</td>
+        <td>Elimina/añade elementos</td>
+        <td>[1,2,3].splice(1,1,9) → [1,9,3]</td>
+    </tr>
+    <tr>
+        <td>.forEach(callback)</td>
+        <td>Itera sobre elementos</td>
+        <td>[1,2,3].forEach(x => console.log(x))</td>
+    </tr>
+    <tr>
+        <td>.map(callback)</td>
+        <td>Crea nuevo array transformado</td>
+        <td>[1,2,3].map(x => x*2) → [2,4,6]</td>
+    </tr>
+    <tr>
+        <td>.filter(callback)</td>
+        <td>Filtra elementos que cumplen condición</td>
+        <td>[1,2,3,4].filter(x => x>2) → [3,4]</td>
+    </tr>
+    <tr>
+        <td>.reduce(callback, initial)</td>
+        <td>Reduce array a un valor único</td>
+        <td>[1,2,3].reduce((acc,x) => acc + x, 0) → 6</td>
+    </tr>
+    <tr>
+        <td>.sort()</td>
+        <td>Ordena elementos (por defecto lexicográfico)</td>
+        <td>[3,1,2].sort() → [1,2,3]</td>
+    </tr>
+</tbody>
+</table>
+</body>
+</html>
